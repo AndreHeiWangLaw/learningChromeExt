@@ -1,0 +1,11 @@
+{
+	"manifest_version": 3,
+	"name": "Hello testerxd world!",
+	"description": "just testing this out",
+	"version": "1.69",
+	"action": {
+		"default_popup": "hello.html",
+		"default_icon": "16x16_icon.png"
+	}
+
+}
