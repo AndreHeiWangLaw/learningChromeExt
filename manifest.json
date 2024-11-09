@@ -1,24 +1,20 @@
 {
 	"manifest_version": 3,
-	"name": "Learning Chrome Ext: Reading Time",
-	"version": "1.0",
-
-	"description": "this is opt",
-	
+	"name": "Quick API Reference",
+	"description": "Quick API can speed up the building of Chrome extensions.",
+	"version": "1.0.0",
 	"icons": {
-		"16": "images/icon-16.png",
-		"32": "images/icon-32.png",
-		"48": "images/icon-48.png",
-		"128": "images/icon-128.png"
+	  "16": "images/icon-16.png",
+	  "128": "images/icon-128.png"
 	},
-
-	"content_scripts":[
-		{
-			"js": ["scripts/content.js"],
-			"matches": [
-				"https://developer.chrome.com/docs/extensions/*",
-				"https://developer.chrome.com/docs/webstore/*"
-			]
-		}
-	]
-}
+	"background": {
+	  "service_worker": "service-worker.js",
+	  "type": "module"
+	},
+	"minimum_chrome_version": "102",
+	"omnibox": {
+	  "keyword": "api"
+	},
+	"permissions": ["alarms", "storage"],
+	"host_permissions": ["https://extension-tips.glitch.me/*"]
+  }
